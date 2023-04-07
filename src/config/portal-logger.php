@@ -5,6 +5,7 @@ return [
         'url' => env('PORTAL_LOGGER_URL', 'https://api.kejaksaanri.id/portal-logger'),
         'path' => env('PORTAL_LOGGER_PATH', '/api/v1/logs/create'),
         'app_id' => env('PORTAL_LOGGER_APP_ID', 'DEFAULT'),
+        'app_key' => env('PORTAL_LOGGER_APP_KEY', ''),
         'default_status_code' => env('PORTAL_LOGGER_STATUS_CODE', '200'),
         'is_ajax_log' => env('PORTAL_LOGGER_IS_AJAX_LOG', false),
         'user_guard' => env('PORTAL_LOGGER_USER_GUARD', 'web'),

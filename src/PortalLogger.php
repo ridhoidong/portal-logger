@@ -72,9 +72,13 @@ class PortalLogger
     {
         try {
             $path = config('portal-logger.logger.path');
+            $appId = config('portal-logger.logger.app_id');
+            $appKey = config('portal-logger.logger.app_key');
             $payload = [
                 'headers' => [
-                    'Content-Type' => 'application/json'
+                    'Content-Type' => 'application/json',
+                    'X-App-Id' => $appId,
+                    'X-Api-Key' => $appKey
                 ],
                 'body' => json_encode($this->contentBody())
             ];

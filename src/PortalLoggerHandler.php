@@ -2,11 +2,12 @@
 namespace KejaksaanDev\PortalLogger;
 
 use Monolog\Logger;
+use Monolog\LogRecord;
 use Monolog\Handler\AbstractProcessingHandler;
 
 class PortalLoggerHandler extends AbstractProcessingHandler
 {
-    protected function write(array $record): void
+    protected function write(LogRecord $record): void
     {
         $level = strtolower(Logger::getLevelName($record['level']));
 

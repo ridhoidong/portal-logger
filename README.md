@@ -58,7 +58,7 @@ return [
 	protected $middlewareGroups = [
 	    'web' => [
 			    // ...
-			    \KejaksaanDev\PortalLogger\Http\Middleware::class
+			    \KejaksaanDev\PortalLogger\Http\Middleware\PortalLogger::class
 		]
 	];
 	```

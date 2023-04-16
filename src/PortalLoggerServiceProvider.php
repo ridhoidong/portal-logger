@@ -4,9 +4,9 @@ namespace KejaksaanDev\PortalLogger;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use KejaksaanDev\PortalLogger\Interface\LogWriter;
-use KejaksaanDev\PortalLogger\Interface\LogProfile;
+use KejaksaanDev\PortalLogger\Interfaces\LogWriter;
 use KejaksaanDev\PortalLogger\Logs\PortalLogWriter;
+use KejaksaanDev\PortalLogger\Interfaces\LogProfile;
 use KejaksaanDev\PortalLogger\Logs\PortalLogProfile;
 
 class PortalLoggerServiceProvider extends ServiceProvider

@@ -3,8 +3,8 @@ namespace KejaksaanDev\PortalLogger\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use KejaksaanDev\PortalLogger\Interface\LogWriter;
-use KejaksaanDev\PortalLogger\Interface\LogProfile;
+use KejaksaanDev\PortalLogger\Interfaces\LogWriter;
+use KejaksaanDev\PortalLogger\Interfaces\LogProfile;
 
 class PortalLogger
 {

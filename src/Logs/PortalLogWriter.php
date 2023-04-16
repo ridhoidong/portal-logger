@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use KejaksaanDev\PortalLogger\Interface\LogWriter;
+use KejaksaanDev\PortalLogger\Interfaces\LogWriter;
 use KejaksaanDev\PortalLogger\Http\Traits\UserDetails;
 use KejaksaanDev\PortalLogger\Http\Traits\WriterLogger;
 use Symfony\Component\HttpFoundation\File\UploadedFile;

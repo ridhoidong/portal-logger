@@ -1,5 +1,5 @@
 <?php
-namespace KejaksaanDev\PortalLogger\Interface;
+namespace KejaksaanDev\PortalLogger\Interfaces;
 
 use Illuminate\Http\Request;
 

@@ -2,7 +2,7 @@
 namespace KejaksaanDev\PortalLogger\Logs;
 
 use Illuminate\Http\Request;
-use KejaksaanDev\PortalLogger\Interface\LogProfile;
+use KejaksaanDev\PortalLogger\Interfaces\LogProfile;
 
 class PortalLogProfile implements LogProfile
 {

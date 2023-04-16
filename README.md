@@ -50,7 +50,20 @@ return [
 
 ## Usage
 
-1. You need add middleware in middleware groups in Kernel
+1. Setup required ENV for portal logger
+
+	```php
+	// in `.env`
+
+	PORTAL_LOGGER_URL={URL_LOGGING_SERVER}
+	PORTAL_LOGGER_APP_ID={APPID_LOGGING_SERVER}
+	PORTAL_LOGGER_APP_KEY={APPKEY_LOGGING_SERVER}
+	PORTAL_LOGGER_REQUEST_TIMEOUT=10
+	PORTAL_LARAVEL_VERSION=10 //if laravel 9 then value is 9
+	
+	```
+
+2. You need add middleware in middleware groups in Kernel
 
 	```php
 	// in `app/Http/Kernel.php`
@@ -64,7 +77,7 @@ return [
 	```
 	
 	
-2. Add new channel in logging config
+3. Add new channel in logging config
 	```php
 		// in `config/logging.php`
 		return [
@@ -75,13 +88,15 @@ return [
 				'portal-logger' => [
 					'driver' => 'monolog',
 					'level' => 'debug',
-					'handler' => KejaksaanDev\PortalLogger\PortalLoggerHandler::class,
+					'handler' => env('PORTAL_LARAVEL_VERSION', 10) >= 10 
+									? KejaksaanDev\PortalLogger\PortalLoggerHandler::class 
+									: KejaksaanDev\PortalLogger\PortalLoggerL10BellowHandler::class
 				],
 			]
 		]
 		```
 
-3. Add report method in Exception Handler
+4. Add report method in Exception Handler
 	```php
 		// in `app\Exceptions\Handler.php`
 		

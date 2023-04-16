@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Request;
 
-trait UserDetails
+class UserDetails
 {
     public static function getUser()
     {

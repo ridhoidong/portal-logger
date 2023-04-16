@@ -7,12 +7,8 @@ use KejaksaanDev\PortalLogger\Http\Traits\UserDetails;
 use KejaksaanDev\PortalLogger\Http\Traits\IpAddressDetails;
 use KejaksaanDev\PortalLogger\Http\Traits\UserAgentDetails;
 
-trait WriterLogger
+class WriterLogger
 {
-    use UserAgentDetails;
-    use IpAddressDetails;
-    use UserDetails;
-
     public static function writeLog(Request $request, $statusCode = null, $level = null, $username = null, $exceptionContext = null, $description = null)
     {
         try {

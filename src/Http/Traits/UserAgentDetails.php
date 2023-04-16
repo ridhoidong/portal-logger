@@ -1,7 +1,7 @@
 <?php
 namespace KejaksaanDev\PortalLogger\Http\Traits;
 
-trait UserAgentDetails
+class UserAgentDetails
 {
     /**
      * Get the user's agents details.

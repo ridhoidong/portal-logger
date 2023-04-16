@@ -3,7 +3,7 @@ namespace KejaksaanDev\PortalLogger\Http\Traits;
 
 use Illuminate\Support\Facades\Request;
 
-trait IpAddressDetails
+class IpAddressDetails
 {
     public static function getIP()
     {

@@ -7,7 +7,6 @@ use KejaksaanDev\PortalLogger\Http\Traits\WriterLogger;
 
 class LogSuccessfulLogin
 {
-    use WriterLogger;
     /**
      * Create the event listener.
      *

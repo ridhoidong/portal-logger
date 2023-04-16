@@ -14,9 +14,7 @@ use KejaksaanDev\PortalLogger\Http\Traits\IpAddressDetails;
 use KejaksaanDev\PortalLogger\Http\Traits\UserAgentDetails;
 
 class PortalLogWriter implements LogWriter
-{
-    use WriterLogger;
-    
+{   
     public function logRequest(Request $request)
     {
         try {

@@ -96,27 +96,32 @@ class UserDetails
 
     public static function nestedPropertyHandle($user, array $property)
     {
-        $size = count($property);
+        try {
+            $size = count($property);
 
-        switch ($size) {
-            case 1 :
-                return $user->{$property[0]} ?? '';
-                break;
-            case 2 :
-                return $user->{$property[0]}->{$property[1]} ?? '';
-                break;
-            case 3 :
-                return $user->{$property[0]}->{$property[1]}->{$property[2]} ?? '';
-                break;
-            case 4 :
-                return $user->{$property[0]}->{$property[1]}->{$property[2]}->{$property[3]} ?? '';
-                break;
-            case 5 :
-                return $user->{$property[0]}->{$property[1]}->{$property[2]}->{$property[3]}->{$property[5]} ?? '';
-                break;
-            default :
-                return $user->{$property[0]} ?? '';
-                break; 
+            switch ($size) {
+                case 1 :
+                    return $user->{$property[0]} ?? '';
+                    break;
+                case 2 :
+                    return $user->{$property[0]}->{$property[1]} ?? '';
+                    break;
+                case 3 :
+                    return $user->{$property[0]}->{$property[1]}->{$property[2]} ?? '';
+                    break;
+                case 4 :
+                    return $user->{$property[0]}->{$property[1]}->{$property[2]}->{$property[3]} ?? '';
+                    break;
+                case 5 :
+                    return $user->{$property[0]}->{$property[1]}->{$property[2]}->{$property[3]}->{$property[5]} ?? '';
+                    break;
+                default :
+                    return $user->{$property[0]} ?? '';
+                    break; 
+            }
+        }
+        catch(\Exception $ex) {
+            return '';
         }
     }
 }
